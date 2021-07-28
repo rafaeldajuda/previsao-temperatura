@@ -4,8 +4,7 @@
   "description": "API que consulta a temperatura da cidade de Taubate",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "devstart": "node index.js",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +22,8 @@
     "express": "^4.17.1",
     "moment": "^2.29.1",
     "mysql": "^2.18.1",
+    "node-fetch": "^2.6.1",
+    "node-schedule": "^2.0.0",
     "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {

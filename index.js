@@ -2,6 +2,7 @@ const customExpress = require('./config/customExpress');
 const appConfig = require('./config/appConfig');
 const dbConnection = require('./infraestrutura/dbConnection');
 const PrevisaoTabelas = require('./infraestrutura/createTablePrevisaoTabela');
+const callAPIs = require('./controllers/callAPIs');
 
 //START DB CONNECTION
 dbConnection.connect(erro =>{
@@ -17,6 +18,9 @@ dbConnection.connect(erro =>{
         app.listen(appConfig.port, () =>{
             console.log('SERVER RUN PORT ' + appConfig.port);
         });
+
+        callAPIs;
+
     }
 })
 
