@@ -23,11 +23,11 @@ function runTempo() {
     var endTime = moment().add(1, 'hour').format();
 
     //FORMATAR DATAS
-    if(startTime.search('\\+') != -1){
-        startTime = startTime.substring(0, 19);
+    if(startTime.search('\\+00') != -1){
+        startTime = startTime.replace('+00', '-03');
     }
-    if(endTime.search('\\+') != -1){
-        endTime = endTime.substring(0, 19);
+    if(endTime.search('\\+00:00') != -1){
+        endTime = endTime.replace('+00', '-03');
     }
 
 
