@@ -11,7 +11,7 @@ module.exports = (app) => {
         //res.sendFile(path.join(__dirname + '/index.html'));
         //res.sendFile(pathViews + "index.html");
 
-        res.status(200).sendFile(__dirname + "index.html");
+        res.status(200).sendFile(pathViews + "index.html");
     });
 
     app.get('/temperaturas', (req, res) =>{
