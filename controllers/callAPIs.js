@@ -32,6 +32,8 @@ function runTempo() {
         `startTime=${startTime}&` +
         `endTime=${endTime}`;
 
+        console.log(startTime);
+
     const metodo = 'GET';
     const body = null;
     const headers = {};
