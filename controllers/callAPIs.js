@@ -19,8 +19,17 @@ function tempo() {
 }
 
 function runTempo() {
-    const startTime = moment().format();
-    const endTime = moment().add(5, 'hour').format();
+    const startTime = moment().subtract(3, 'hour').format();
+    const endTime = moment().subtract(3, 'hour').add(5, 'hour').format();
+
+    //FORMATAR DATAS
+    if(startTime.search('+') != -1){
+        startTime = startTime.substring(0, 19);
+    }
+    if(endTime.search('+') != -1){
+        endTime = startTime.substring(0, 19);
+    }
+
 
     const urlRequest = appConfig.url +
         `?location=${appConfig.location}&` +
@@ -33,6 +42,7 @@ function runTempo() {
         `endTime=${endTime}`;
 
         console.log(startTime);
+        console.log(endTime);
 
     const metodo = 'GET';
     const body = null;
