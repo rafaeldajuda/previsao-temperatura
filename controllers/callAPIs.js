@@ -41,7 +41,7 @@ function runTempo() {
             PrevisaoTempo.insertPrevisaoTempo(JSON.parse(response));
             console.log(response);
         } else {
-            //console.log(response);
+            console.log(response);
         }
     });
 }
