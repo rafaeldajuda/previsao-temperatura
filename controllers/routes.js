@@ -3,7 +3,8 @@ const moment = require('moment');
 const httpRequest = require('../controllers/httpRequest');
 const PrevisaoTempo = require('../model/previsaoTempo');
 const path = require('path');
-const pathViews = '/home/rafael/Documentos/Outros/APIs Node/previsao-temperatura/'
+//const pathViews = '/home/rafael/Documentos/Outros/APIs Node/previsao-temperatura/'
+const pathViews = '~/previsao-temperatura/'
 
 module.exports = (app) => {
     app.get('/', (req, res) =>{
