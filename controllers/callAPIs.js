@@ -23,10 +23,10 @@ function runTempo() {
     const endTime = moment().subtract(3, 'hour').add(5, 'hour').format();
 
     //FORMATAR DATAS
-    if(startTime.search('+') != -1){
+    if(startTime.search('\\+') != -1){
         startTime = startTime.substring(0, 19);
     }
-    if(endTime.search('+') != -1){
+    if(endTime.search('\\+') != -1){
         endTime = startTime.substring(0, 19);
     }
 
