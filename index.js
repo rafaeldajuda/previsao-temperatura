@@ -15,7 +15,7 @@ dbConnection.connect(erro => {
 
         //START SERVER - PORT 3000
         const app = customExpress();
-        app.listen(appConfig.port, () => {
+        app.listen(process.env.PORT || appConfig.port, () => {
             console.log('SERVER RUN PORT ' + appConfig.port);
         });
         callAPIs;
