@@ -20,7 +20,7 @@ function tempo() {
 
 function runTempo() {
     var startTime = moment().subtract(3, 'hour').format();
-    var endTime = moment().subtract(3, 'hour').add(5, 'hour').format();
+    var endTime = moment().add(2, 'hour').format();
 
     //FORMATAR DATAS
     if(startTime.search('\\+') != -1){
@@ -43,6 +43,7 @@ function runTempo() {
 
         console.log(startTime);
         console.log(endTime);
+        console.log(urlRequest);
 
     const metodo = 'GET';
     const body = null;
