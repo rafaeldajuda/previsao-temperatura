@@ -19,8 +19,8 @@ function tempo() {
 }
 
 function runTempo() {
-    const startTime = moment().subtract(3, 'hour').format();
-    const endTime = moment().subtract(3, 'hour').add(5, 'hour').format();
+    var startTime = moment().subtract(3, 'hour').format();
+    var endTime = moment().subtract(3, 'hour').add(5, 'hour').format();
 
     //FORMATAR DATAS
     if(startTime.search('\\+') != -1){
