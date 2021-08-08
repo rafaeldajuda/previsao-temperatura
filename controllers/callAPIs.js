@@ -39,7 +39,7 @@ function runTempo() {
     httpRequest(metodo, urlRequest, body, headers, (status, response) => {
         if (status == 200) {
             PrevisaoTempo.insertPrevisaoTempo(JSON.parse(response));
-            //console.log(response);
+            console.log(response);
         } else {
             //console.log(response);
         }
