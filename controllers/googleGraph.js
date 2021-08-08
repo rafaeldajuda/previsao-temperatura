@@ -1,4 +1,5 @@
-var temperaturas = httpRequest("GET", "http://localhost:3000/temperaturas", null, {});
+//var temperaturas = httpRequest("GET", "http://localhost:3000/temperaturas", null, {});
+var temperaturas = httpRequest("GET", "https://previsao-temperatura.herokuapp.com/temperaturas", null, {});
 temperaturas = JSON.parse(temperaturas);
 
 var listaMediaTemperaturas = [];
