@@ -3,7 +3,7 @@
 */ 
 
 module.exports = { 
-    port: 3000,
+    port: 8080,
     location: "-23.027722192329534,-45.55901857432534",
     fields: "temperature",
     timesteps: "1h",
