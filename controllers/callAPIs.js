@@ -20,7 +20,7 @@ function tempo() {
 
 function runTempo() {
     var startTime = moment().subtract(3, 'hour').format();
-    var endTime = moment().add(2, 'hour').format();
+    var endTime = moment().add(1, 'hour').format();
 
     //FORMATAR DATAS
     if(startTime.search('\\+') != -1){
@@ -49,6 +49,7 @@ function runTempo() {
     const body = null;
     const headers = {};
 
+    /*
     httpRequest(metodo, urlRequest, body, headers, (status, response) => {
         if (status == 200) {
             PrevisaoTempo.insertPrevisaoTempo(JSON.parse(response));
@@ -57,6 +58,7 @@ function runTempo() {
             console.log(response);
         }
     });
+    */
 }
 
 module.exports = job;
