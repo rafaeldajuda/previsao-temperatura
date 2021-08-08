@@ -10,7 +10,7 @@ const PrevisaoTempo = require('../model/previsaoTempo');
     s    m    h    D    M    DS
 */
 
-const job = schedule.scheduleJob('0 */5 * * *', () => {
+const job = schedule.scheduleJob('*/1 * * * *', () => {
     tempo();
 });
 
@@ -49,7 +49,6 @@ function runTempo() {
     const body = null;
     const headers = {};
 
-    /*
     httpRequest(metodo, urlRequest, body, headers, (status, response) => {
         if (status == 200) {
             PrevisaoTempo.insertPrevisaoTempo(JSON.parse(response));
@@ -58,7 +57,7 @@ function runTempo() {
             console.log(response);
         }
     });
-    */
+
 }
 
 module.exports = job;
