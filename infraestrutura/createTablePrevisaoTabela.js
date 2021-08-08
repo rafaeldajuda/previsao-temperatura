@@ -17,7 +17,7 @@ class PrevisaoTabelas {
 
         this.dbConnection.query(sql, (error) =>{
             if(error){
-                console(error);
+                console.log(error);
             }else{
                 console.log("table previsaoTempo created");
             }

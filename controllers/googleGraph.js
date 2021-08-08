@@ -30,7 +30,7 @@ if(listaMediaTemperaturas.length > 30){
     listaMediaTemperaturas.slice(0, dif);
 }
 
-function httpRequest(metodo, url, body, headers,) {
+function httpRequest(metodo, url, body, headers) {
     const xhr = new XMLHttpRequest();
 
     //OPEN CONNECTION
@@ -41,15 +41,8 @@ function httpRequest(metodo, url, body, headers,) {
         xhr.setRequestHeader(h, headers[h]);
     }
 
-    //res.status(200).json(url);
-
     //SEND REQUEST
     xhr.send(body);
 
-    /*
-    xhr.addEventListener('load', () => {
-        console.log(xhr.responseText);
-    });
-    */
     return xhr.responseText;
 }

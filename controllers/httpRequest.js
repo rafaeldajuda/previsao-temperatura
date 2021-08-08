@@ -1,6 +1,6 @@
 const XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 
-function httpRequest(metodo, url, body, headers, res, callback){
+function httpRequest(metodo, url, body, headers, callback){
     const xhr = new XMLHttpRequest();
 
     //OPEN CONNECTION
@@ -17,8 +17,7 @@ function httpRequest(metodo, url, body, headers, res, callback){
     xhr.send(body);
 
     xhr.addEventListener('load', () => {
-        callback(res, xhr.status, xhr.responseText);
-        //res.status(xhr.status).json(JSON.parse(xhr.responseText));
+        callback(xhr.status, xhr.responseText);
     });
     
 

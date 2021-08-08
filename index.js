@@ -5,22 +5,32 @@ const PrevisaoTabelas = require('./infraestrutura/createTablePrevisaoTabela');
 const callAPIs = require('./controllers/callAPIs');
 
 //START DB CONNECTION
-dbConnection.connect(erro =>{
-    if(erro){
+dbConnection.connect(erro => {
+    if (erro) {
         console.log(erro);
-    }else{
+    } else {
         console.log('db connection successful');
         PrevisaoTabelas.init(dbConnection);
         PrevisaoTabelas.createPrevisaoTempo();
 
         //START SERVER - PORT 3000
         const app = customExpress();
-        app.listen(appConfig.port, () =>{
+        app.listen(appConfig.port, () => {
             console.log('SERVER RUN PORT ' + appConfig.port);
         });
-
         callAPIs;
-
     }
 })
+
+setInterval(function () {
+    dbConnection.query('SELECT 1');
+}, 60000);
+
+
+
+
+
+
+
+
 
