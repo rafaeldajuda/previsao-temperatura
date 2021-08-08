@@ -10,7 +10,7 @@ const PrevisaoTempo = require('../model/previsaoTempo');
     s    m    h    D    M    DS
 */
 
-const job = schedule.scheduleJob('*/1 * * * *', () => {
+const job = schedule.scheduleJob('0 */5 * * *', () => {
     tempo();
 });
 
@@ -41,9 +41,9 @@ function runTempo() {
         `startTime=${startTime}&` +
         `endTime=${endTime}`;
 
-        console.log(startTime);
-        console.log(endTime);
-        console.log(urlRequest);
+        //console.log(startTime);
+        //console.log(endTime);
+        //console.log(urlRequest);
 
     const metodo = 'GET';
     const body = null;
@@ -52,9 +52,9 @@ function runTempo() {
     httpRequest(metodo, urlRequest, body, headers, (status, response) => {
         if (status == 200) {
             PrevisaoTempo.insertPrevisaoTempo(JSON.parse(response));
-            console.log(response);
+            //console.log(response);
         } else {
-            console.log(response);
+            //console.log(response);
         }
     });
 
