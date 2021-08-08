@@ -10,7 +10,7 @@ const PrevisaoTempo = require('../model/previsaoTempo');
     s    m    h    D    M    DS
 */
 
-const job = schedule.scheduleJob('*/1 * * * *', () => {
+const job = schedule.scheduleJob('0 */5 * * *', () => {
     tempo();
 });
 
