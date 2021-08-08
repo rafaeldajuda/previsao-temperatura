@@ -27,7 +27,7 @@ function runTempo() {
         startTime = startTime.substring(0, 19);
     }
     if(endTime.search('\\+') != -1){
-        endTime = startTime.substring(0, 19);
+        endTime = endTime.substring(0, 19);
     }
 
 
