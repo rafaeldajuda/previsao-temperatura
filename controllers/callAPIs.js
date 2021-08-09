@@ -11,7 +11,7 @@ const PrevisaoTempo = require('../model/previsaoTempo');
 */
 
 const job = schedule.scheduleJob('0 */5 * * *', () => {
-    tempo();
+    runTempo();
 });
 
 function tempo() {
