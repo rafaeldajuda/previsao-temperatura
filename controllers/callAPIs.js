@@ -14,10 +14,6 @@ const job = schedule.scheduleJob('0 */1 * * *', () => {
     runTempo();
 });
 
-function tempo() {
-    runTempo();
-}
-
 function runTempo() {
     var startTime = moment().subtract(3, 'hour').format();
     var endTime = moment().add(1, 'hour').format();

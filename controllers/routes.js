@@ -2,16 +2,17 @@ const express = require('express');
 const moment = require('moment');
 const httpRequest = require('../controllers/httpRequest');
 const PrevisaoTempo = require('../model/previsaoTempo');
-const path = require('path');
+const appConfig = require('../config/appConfig')
+//const path = require('path');
 //const pathViews = '/home/rafael/Documentos/Outros/APIs Node/previsao-temperatura/'
-const pathViews = '/app/'
+//const pathViews = '/app/'
 
 module.exports = (app) => {
     app.get('/', (req, res) =>{
         //res.sendFile(path.join(__dirname + '/index.html'));
         //res.sendFile(pathViews + "index.html");
 
-        res.status(200).sendFile(pathViews + "index.html");
+        res.status(200).sendFile(appConfig.app.path_index + "index.html");
     });
 
     app.get('/temperaturas', (req, res) =>{

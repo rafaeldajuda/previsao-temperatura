@@ -13,10 +13,10 @@ dbConnection.connect(erro => {
         PrevisaoTabelas.init(dbConnection);
         PrevisaoTabelas.createPrevisaoTempo();
 
-        //START SERVER - PORT 3000
+        //START SERVER - PORT
         const app = customExpress();
         app.listen(process.env.PORT || appConfig.port, () => {
-            console.log('SERVER RUN PORT ' + appConfig.port);
+            console.log('SERVER RUN PORT ' + (process.env.PORT || appConfig.port));
         });
         callAPIs;
     }
