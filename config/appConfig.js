@@ -9,7 +9,7 @@ const prodConfig = {
     timesteps: "1h",
     units: "metric",
     timezone: "Brazil/East",
-    apikey: "6yFuIlZkJ3iSFFIxht6hxnJOKqEJfmkq",
+    apikey: "XXXXXXXXXXXXXX",
     url: "https://api.tomorrow.io/v4/timelines",
     local: "taubate",
     app: {
@@ -24,7 +24,7 @@ const devConfig = {
     timesteps: "1h",
     units: "metric",
     timezone: "Brazil/East",
-    apikey: "6yFuIlZkJ3iSFFIxht6hxnJOKqEJfmkq",
+    apikey: "XXXXXXXXXXXXXX",
     url: "https://api.tomorrow.io/v4/timelines",
     local: "taubate",
     app: {
