@@ -76,12 +76,34 @@ var dici_semestre_2 = {
 
 //PEGAR TABELA
 var tabela = document.querySelector("table");
+if(window.screen.width > 480){
 
-//PRIMEIRO SEMESTRE ///////////////////////////////////
-tabela.appendChild(criarTr(quenteFrio ,dici_semestre_1));
+    //PRIMEIRO SEMESTRE ///////////////////////////////////
+    tabela.appendChild(criarTr(quenteFrio ,dici_semestre_1));
 
-//SEGUNDO SEMESTRE  ///////////////////////////////////
-tabela.appendChild(criarTr(quenteFrio ,dici_semestre_2));
+    //SEGUNDO SEMESTRE  ///////////////////////////////////
+    tabela.appendChild(criarTr(quenteFrio ,dici_semestre_2));
+}else{
+    //PRIMEIRO SEMESTRE 
+    var numero_meses_1 = Object.keys(dici_semestre_1).length;
+    for(var x = 0; x < numero_meses_1; x+=2){
+        var dois_meses = {};
+        dois_meses[x+1] = dici_semestre_1[x+1];
+        dois_meses[x+2] = dici_semestre_1[x+2];
+        console.log(dois_meses);
+        tabela.appendChild(criarTr(quenteFrio ,dois_meses));
+    }
+
+    //PRIMEIRO SEMESTRE 
+    numero_meses_2 = Object.keys(dici_semestre_2).length;
+    for(var x = numero_meses_1; x < numero_meses_2*2; x+=2){
+        var dois_meses = {};
+        dois_meses[x+1] = dici_semestre_2[x+1];
+        dois_meses[x+2] = dici_semestre_2[x+2];
+        console.log(dois_meses);
+        tabela.appendChild(criarTr(quenteFrio ,dois_meses));
+    }
+}
 
 function criarTr(quenteFrio, dici_meses) {
     //CRIAR TR
